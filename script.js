@@ -17,7 +17,7 @@ async function main() {
   const contract = await ethers.getContractAt("EIP7002WithdrawalRequest__Mock", EIP7002_ADDRESS);
   console.debug({ code: await ethers.provider.getCode(EIP7002_ADDRESS) });
   console.debug("before call");
-  await contract.mock__setFee(1n);
+  await contract.setBytes();
   console.debug("after call")
   // Freezes with RPC request pattern:
   // eth_blockNumber

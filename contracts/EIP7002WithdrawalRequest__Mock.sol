@@ -2,10 +2,14 @@
 pragma solidity 0.8.9;
 
 contract EIP7002WithdrawalRequest__Mock {
-    bytes public fee;
+    bytes public b;
+    uint public x;
 
-    function mock__setFee(uint256 _fee) external {
-        require(_fee > 0, "fee must be greater than 0");
-        fee = abi.encode(_fee);
+    function setBytes() external {
+        b = hex"1234";
+    }
+
+    function setUint() external {
+        x = 1234;
     }
 }
